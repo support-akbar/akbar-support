@@ -7,94 +7,198 @@
 <title>Support Akbar Hosseini</title>
 
 <style>
+
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background: #f2f4f7;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 .card {
-    background: white;
-    max-width: 500px;
+    max-width: 550px;
     margin: auto;
+    background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #ccc;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-img {
+.profile {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    border: 5px solid #eee;
 }
 
 h1 {
+    color: #222;
+}
+
+h2 {
     color: #333;
 }
 
 p {
     font-size: 18px;
+    line-height: 1.6;
     color: #555;
 }
 
 .wallet {
-    background: #eee;
-    padding: 12px;
+    background: #f7f7f7;
+    padding: 15px;
     margin: 15px 0;
-    border-radius: 8px;
+    border-radius: 10px;
+    text-align: left;
     word-break: break-all;
 }
 
+.wallet-title {
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.address {
+    color: #444;
+    font-size: 14px;
+}
+
 button {
-    background: #1a73e8;
+    background: #0066ff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 10px;
 }
+
+button:hover {
+    background:#004ecc;
+}
+
+.footer {
+    margin-top:30px;
+    color:#777;
+}
+
 </style>
 
 </head>
+
 
 <body>
 
 <div class="card">
 
-<h1>Support Akbar Hosseini</h1>
+<img src="profile.jpg" class="profile">
 
-<img src="profile.jpg" alt="Akbar Hosseini">
+
+<h1>
+Support Akbar Hosseini
+</h1>
+
 
 <p>
-I am asking for support to help with my living expenses.
-Your kindness and support means a lot.
+Hello, my name is Akbar Hosseini.
+<br>
+I created this page to receive support for my living expenses.
+<br>
+Any help and kindness is greatly appreciated.
 </p>
 
 
-<h2>Crypto Support</h2>
+<h2>
+Crypto Support
+</h2>
+
 
 
 <div class="wallet">
-Bitcoin (BTC)<br>
+
+<div class="wallet-title">
+Bitcoin (BTC)
+</div>
+
+<div class="address" id="btc">
 14Euyus8UejLGWmbBWJFrzfQTewAkxZC1w
 </div>
 
+<button onclick="copyText('btc')">
+Copy
+</button>
+
+</div>
+
+
+
 
 <div class="wallet">
-Ethereum (ETH)<br>
+
+<div class="wallet-title">
+Ethereum (ETH)
+</div>
+
+<div class="address" id="eth">
 0x04bF4c20Df1dEff966f522E8B479533e497E9C75
 </div>
 
+<button onclick="copyText('eth')">
+Copy
+</button>
+
+</div>
+
+
+
+
 
 <div class="wallet">
-USDT (TRC20)<br>
+
+<div class="wallet-title">
+USDT TRC20
+</div>
+
+<div class="address" id="usdt">
 TW3UfoYWp1yXH4AUUkBFkUjCWWN54hMNdx
 </div>
 
+<button onclick="copyText('usdt')">
+Copy
+</button>
 
 </div>
+
+
+
+<div class="footer">
+
+Thank you for your support ❤️
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function copyText(id){
+
+let text=document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Wallet address copied!");
+
+}
+
+</script>
+
 
 </body>
 </html>
